@@ -4,6 +4,8 @@ const passport = require('passport')
 
 const Note = require('../models/note')
 
+const User = require('../models/user')
+
 const customErrors = require('../../lib/custom_errors')
 
 const handle404 = customErrors.handle404
@@ -20,6 +22,15 @@ const router = express.Router()
 router.post('/notes', requireToken, (req, res, next) => {
   req.body.note.owner = req.user.id
 
+  // const noteData = req.body.note
+  // console.log(req.user.id)
+  // // User.findById(req.user.id)
+  // //   .then(handle404)
+  // //   .then(user => {
+  // //     user.notes.push(noteData)
+  // //     console.log(user)
+  // //     return user.save()
+  // //   })
   Note.create(req.body.note)
     .then(note => {
       res.status(201).json({ note: note.toObject() })
