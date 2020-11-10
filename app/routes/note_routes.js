@@ -20,11 +20,11 @@ const router = express.Router()
 
 // CREATE A NEW NOTE
 router.post('/notes', requireToken, (req, res, next) => {
-  req.body.note.owner = req.user.id
-  Note.create(req.body.note)
-    .then(note => {
-      res.status(201).json({ note: note.toObject() })
-    })
+  const noteInfo = req.body.note
+  noteInfo.owner = req.user.id
+
+  Note.create(noteInfo)
+    .then(note => res.status(201).json({ note }))
     .catch(next)
 })
 // DELETE note
@@ -41,19 +41,21 @@ router.delete('/notes/:id', requireToken, (req, res, next) => {
 })
 // GET Index for Notes
 router.get('/notes', requireToken, (req, res, next) => {
-  Note.find()
+  Note.find({ owner: req.user.id })
     .populate('owner')
-    .then(notes => {
-      return notes.map(note => note.toObject())
-    })
-    .then(notes => res.status(200).json({ notes: notes }))
+    .then(notes => res.json({ notes }))
     .catch(next)
 })
 // GET Show for a note
 router.get('/notes/:id', requireToken, (req, res, next) => {
+  // const id = req.params.id
   Note.findById(req.params.id)
     .then(handle404)
-    .then(note => res.status(200).json({ note: note.toObject() }))
+    .then(note => {
+      requireOwnership(req, note)
+      return res.json({ note })
+    })
+    // .then(foundNote => )
     .catch(next)
 })
 // UPDATE note
