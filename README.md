@@ -23,6 +23,8 @@ automatically index upon logging in.
 ### Entity relationship diagram
 <https://imgur.com/a/jKJX72S>
 
+#### Links to deployed client and client repository
+
 Link to Lilypad Client side <https://puleri.github.io/Lilypad-Client/>
 <br>
 Link to Lilypad Client repo <https://github.com/puleri/Lilypad-Client>
