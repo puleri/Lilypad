@@ -7,8 +7,9 @@ user must be the owner of any notes they wish to view, edit, or delete.
 
 ## Planning and execution
 Prior to coding the API came studying personal notes and information on W3.
-A schedule was then created for the genesis of the Express side of Lilypad.
-The user and notes routes were set up within 2 days and then what work followed
+A schedule was then created for the genesis of the Express side of Lilypad. A-Bing
+with previous examples I worked on led to an efficient workflow, faster than in previous
+projects. The user and notes routes were set up within 2 days and then what work followed
 was done on the client side for the following two days. More information on this
 can be seen in the client repository which is linked below.
 
