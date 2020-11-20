@@ -18,7 +18,10 @@ Express.js, MongoDB, ATOM, and Macbook Pro
 ## Future of the project
 The user routes currently allow the user to index their notes after logging in.
 In a future iteration, the user would benefit from having the user notes
-automatically index upon logging in.
+automatically index upon logging in. Also, the users are required to grab and
+input their notes id's to edit, change or delete them. This is tedious and
+would be changed in future iterations to be able to be done with a button
+and no id input necessary.
 
 ### Entity relationship diagram
 <https://imgur.com/a/RRy6YO1>
