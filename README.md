@@ -13,7 +13,7 @@ was done on the client side for the following two days. More information on this
 can be seen in the client repository which is linked below.
 
 ## Technologies used
-Express.js, Javascript, Heroku, MongoDB, ATOM, and Macbook Pro
+Express.js, MongoDB, ATOM, and Macbook Pro
 
 ## Future of the project
 The user routes currently allow the user to index their notes after logging in.
@@ -21,7 +21,7 @@ In a future iteration, the user would benefit from having the user notes
 automatically index upon logging in.
 
 ### Entity relationship diagram
-<https://imgur.com/a/jKJX72S>
+<https://imgur.com/a/RRy6YO1>
 
 #### Links to deployed client and client repository
 
