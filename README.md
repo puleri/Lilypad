@@ -13,7 +13,7 @@ was done on the client side for the following two days. More information on this
 can be seen in the client repository which is linked below.
 
 ## Technologies used
-Express.js, MongoDB, ATOM, and Macbook Pro
+Express.js, Javascript, Heroku, MongoDB, ATOM, and Macbook Pro
 
 ## Future of the project
 The user routes currently allow the user to index their notes after logging in.
